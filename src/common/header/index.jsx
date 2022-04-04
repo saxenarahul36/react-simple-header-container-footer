@@ -2,13 +2,12 @@ import React from "react";
 import NavBar from "../navBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/fontawesome-free-solid";
-
 import { HeaderWrper, Icons } from "./ui";
 
 const Header = () => {
   return (
     <HeaderWrper>
-      <NavBar></NavBar>
+      <NavBar />
       <Icons>
         <FontAwesomeIcon
           title={"Profile"}

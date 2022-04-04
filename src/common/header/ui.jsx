@@ -4,7 +4,7 @@ export const HeaderWrper = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  background: #494e54;
+  background: gray;
   display: flex;
   align-items: center;
   justify-content: space-between;

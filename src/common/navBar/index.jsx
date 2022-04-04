@@ -1,86 +1,69 @@
-import React, { useState, useEffect, useRef } from "react";
-import { NavBarWreper } from "./ui";
+import React from "react";
+import { NavBarWreper, DropdownContent } from "./ui";
 
 const NavBar = () => {
-  const [currentTab, setTab] = useState(null);
-  const showTabMenu = (tab) => {
-    setTab(tab);
-  };
-
-  const myHeaderRef = useRef(null);
-  useEffect(() => {
-    const hideTab = (event) => {
-      if (myHeaderRef.current.contains(event.target)) {
-      } else {
-        setTab(null);
-      }
-    };
-    document.addEventListener("click", hideTab);
-    return () => document.removeEventListener("click", hideTab);
-  }, []);
-
   return (
     <>
-      <NavBarWreper ref={myHeaderRef}>
+      <NavBarWreper animated>
         <ul>
-          <li onClick={() => showTabMenu("Home")} id={"Home"}>
+          <li>
             Home
-            <ul className={currentTab === "Home" && "active"}>
+            <ul>
               <li>
                 <a>Link 1</a>
               </li>
               <li>
-                <a>Link 2</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 3</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 4</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 5</a>
+                <a>Link 1</a>
               </li>
             </ul>
           </li>
-          <li onClick={() => showTabMenu("Contact")}>
+          <li>
             Contact
-            <ul className={currentTab === "Contact" && "active"}>
+            <ul>
               <li>
                 <a>Link 1</a>
               </li>
               <li>
-                <a>Link 2</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 3</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 4</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 5</a>
+                <a>Link 1</a>
               </li>
             </ul>
           </li>
-          <li onClick={() => showTabMenu("Address")}>Address</li>
-          <li onClick={() => showTabMenu("AboutUs")} id={"AboutUs"}>
+          <li>Address</li>
+          <li>
             AboutUs
-            <ul className={currentTab === "AboutUs" && "active"}>
+            <ul>
               <li>
                 <a>Link 1</a>
               </li>
               <li>
-                <a>Link 2</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 3</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 4</a>
+                <a>Link 1</a>
               </li>
               <li>
-                <a>Link 5</a>
+                <a>Link 1</a>
               </li>
             </ul>
           </li>
